@@ -2,11 +2,8 @@ class Solution {
 
     public boolean wordBreak(String s, List<String> wordDict) {
         boolean[] dp = new boolean[s.length() + 1];
-
-
-        for (int i = 0; i < dp.length; i++) {
-            dp[i] = false;
-        }
+        
+        // don't need to initialize all values to false with for loop since they start false by default in Java
 
         dp[s.length()] = true;
 
